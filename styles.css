@@ -13,17 +13,7 @@
     margin: 100px;
 }
 
-#menu::before {
-    background-color: var(--item-color);
-    position: absolute;
-    display: block;
-    content: "";
-    width: var(--menu-bar-width);
-    height: var(--menu-bar-height);
-    left: 0;
-    top: -20px;
-}
-
+#menu::before,
 #menu::after {
     background-color: var(--item-color);
     position: absolute;
@@ -31,6 +21,16 @@
     content: "";
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
+}
+
+/*Balkje boven*/
+#menu::before {
+    left: 0;
+    top: -20px;
+}
+
+/*balkje onder*/
+#menu::after {
     left: 0;
     top: 20px;
 }
