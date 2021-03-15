@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 :root {
     --item-color: hsl(334, 66%, 55%);
     --bg-main-color: hsl(0, 0%, 100%);
@@ -5,12 +10,25 @@
     --menu-bar-height: 10px;
 }
 
+.container {
+    padding: 0;
+    width: 60px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 100px;
+}
+
+.container,#menu:hover{
+    background-color: white;
+    transition: background-color 0.5s;
+}
+
 #menu {
     background-color: var(--item-color);
     position: relative;
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
-    margin: 100px;
+    top: 20px;
 }
 
 #menu::before,
@@ -34,3 +52,4 @@
     left: 0;
     top: 20px;
 }
+
