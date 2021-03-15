@@ -1,5 +1,36 @@
 :root {
     --item-color: hsl(334, 66%, 55%);
     --bg-main-color: hsl(0, 0%, 100%);
+    --menu-bar-width: 60px;
+    --menu-bar-height: 10px;
 }
 
+#menu {
+    background-color: var(--item-color);
+    position: relative;
+    width: var(--menu-bar-width);
+    height: var(--menu-bar-height);
+    margin: 100px;
+}
+
+#menu::before {
+    background-color: var(--item-color);
+    position: absolute;
+    display: block;
+    content: "";
+    width: var(--menu-bar-width);
+    height: var(--menu-bar-height);
+    left: 0;
+    top: -20px;
+}
+
+#menu::after {
+    background-color: var(--item-color);
+    position: absolute;
+    display: block;
+    content: "";
+    width: var(--menu-bar-width);
+    height: var(--menu-bar-height);
+    left: 0;
+    top: 20px;
+}
