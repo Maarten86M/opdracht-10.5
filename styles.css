@@ -18,10 +18,10 @@
     margin: 100px;
 }
 
-.container,#menu:hover{
-    background-color: white;
-    transition: background-color 0.5s;
-}
+/*.container #menu:hover{*/
+/*    background-color: white;*/
+/*    transition: background-color 0.5s;*/
+/*}*/
 
 #menu {
     background-color: var(--item-color);
@@ -53,3 +53,15 @@
     top: 20px;
 }
 
+/*#menu:hover:before{*/
+/*    transform: rotate(40deg);*/
+/*    transform-origin: bottom left;*/
+
+
+/*}*/
+
+/*#menu:hover:after{*/
+/*    transform: rotate(-40deg);*/
+/*    transform-origin: top left;*/
+
+/*}*/
