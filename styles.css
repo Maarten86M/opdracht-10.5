@@ -1,12 +1,12 @@
+/*css reset*/
 * {
     padding: 0;
     margin: 0;
 }
 
 :root {
-    --item-color: hsl(334, 66%, 55%);
-    --bg-main-color: hsl(0, 0%, 100%);
-    --bg-menu-color: none;
+    --icon-color: hsl(334, 66%, 55%);
+    --icon-bg-color: none;
     --menu-bar-width: 60px;
     --menu-bar-height: 10px;
 }
@@ -15,17 +15,17 @@
     padding: 0;
     width: 60px;
     height: 50px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     margin: 100px;
 }
 
-.container #menu:hover{
-    background-color: var(--bg-menu-color);
-    transition: background-color 0.3s ease-out;
-}
+/*.container #menu:hover {*/
+/*    background-color: var(--icon-bg-color);*/
+/*    transition: background-color 0.3s ease-out;*/
+/*}*/
 
 #menu {
-    background-color: var(--item-color);
+    background-color: var(--icon-color);
     position: relative;
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
@@ -34,12 +34,12 @@
 
 #menu::before,
 #menu::after {
-    background-color: var(--item-color);
+    background-color: var(--icon-color);
+    width: var(--menu-bar-width);
+    height: var(--menu-bar-height);
     position: absolute;
     display: block;
     content: "";
-    width: var(--menu-bar-width);
-    height: var(--menu-bar-height);
 }
 
 /*Balkje boven*/
@@ -54,15 +54,12 @@
     top: 20px;
 }
 
-/*#menu:hover:before{*/
+/*#menu:hover:before {*/
 /*    transform: rotate(40deg);*/
 /*    transform-origin: bottom left;*/
-
-
 /*}*/
 
-/*#menu:hover:after{*/
+/*#menu:hover:after {*/
 /*    transform: rotate(-40deg);*/
 /*    transform-origin: top left;*/
-
 /*}*/
