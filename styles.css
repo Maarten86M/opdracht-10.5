@@ -11,18 +11,16 @@
     --menu-bar-height: 10px;
 }
 
-.container {
+#container {
     padding: 0;
-    width: 60px;
+    width: var(--menu-bar-width);
     height: 50px;
-    /*border: 1px solid black;*/
     margin: 100px;
 }
 
-/*.container #menu:hover {*/
-/*    background-color: var(--icon-bg-color);*/
-/*    transition: background-color 0.3s ease-out;*/
-/*}*/
+#container:hover #menu {
+    background-color: var(--icon-bg-color);
+}
 
 #menu {
     background-color: var(--icon-color);
@@ -30,6 +28,7 @@
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
     top: 20px;
+    transition: background-color 0.3s ease-out;
 }
 
 #menu::before,
@@ -46,20 +45,26 @@
 #menu::before {
     left: 0;
     top: -20px;
+    transform: rotate(0deg);
+    transform-origin: bottom left;
+    transition: all 0.4s ease-in-out;
 }
 
 /*balkje onder*/
 #menu::after {
     left: 0;
     top: 20px;
+    transform: rotate(0deg);
+    transform-origin: top left;
+    transition: all 0.4s ease-in-out;
 }
 
-/*#menu:hover:before {*/
-/*    transform: rotate(40deg);*/
-/*    transform-origin: bottom left;*/
-/*}*/
+#container:hover #menu::before {
+    transform: rotate(40deg);
+    transform-origin: bottom left;
+}
 
-/*#menu:hover:after {*/
-/*    transform: rotate(-40deg);*/
-/*    transform-origin: top left;*/
-/*}*/
+#container:hover #menu::after {
+    transform: rotate(-40deg);
+    transform-origin: top left;
+}
